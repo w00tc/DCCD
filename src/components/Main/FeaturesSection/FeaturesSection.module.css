@@ -1,0 +1,59 @@
+.featuresSection {
+    background: linear-gradient(to right, #3e2bce 0%, #2dd3aa 100%, #2dd3aa 100%, #2dd3aa 100%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin: 0 10%;
+}
+.sectionTitle {
+    margin: 0 10%;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.sectionTitle h2 {
+    font-size: 55px;
+    margin: 0 0 20px 0;
+    font-weight: 500;
+}
+.sectionTitle p {
+    font-size: 16px;
+    font-weight: 500;
+}
+.featureContent a {
+    color: white;
+    text-decoration: underline;
+}
+.featureContent {
+    color: white;
+    padding-left: 70px;
+}
+.featureContent h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: "Futura", sans-serif;
+    margin-bottom: 15px;
+}
+.featureContent p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.feature {
+    display: inline-block;
+    align-items: start;
+    padding: 0 15px;
+}
+.icon {
+    padding-top: 10px;
+    display: inline-block;
+    float: left;
+    margin-top: 31px;
+    color: white;
+    font-size: 42px
+}

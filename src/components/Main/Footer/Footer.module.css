@@ -1,0 +1,34 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    margin: 0 10%;
+    padding: 100px 0 100px 0;
+}
+.footerWidget p {
+    font-size: 16px;
+    color: #75849a;
+    line-height: 1.6;
+}
+.footerWidget h5 {
+    margin: 0 0 20px 0;
+    font-size: 25px;
+    font-weight: 400;
+    color: #20509e;
+}
+.footerWidget ul {
+    list-style: none;
+    padding: 0;
+}
+.footerWidget ul a {
+    font-size: 16px;
+    color: #75849a;
+    display: block;
+    margin-bottom: 12px;
+}
+.footerWidget span {
+    color: #acb9cc;
+}
+.footerLogo{
+    margin-bottom: 1.5rem;
+}
