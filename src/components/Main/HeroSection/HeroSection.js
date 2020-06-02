@@ -1,7 +1,7 @@
 import React from 'react';
 import style from "./HeroSection.module.css";
-import laptop from "../../img/laptop.png"
-import {Header} from "../Header/Header";
+import laptop from "../../../img/laptop.png"
+import {Header} from "../../Header/Header";
 
 export const HeroSection = (props) => {
     return (
@@ -9,8 +9,8 @@ export const HeroSection = (props) => {
             <Header/>
             <div className={style.container}>
                     <div className={style.heroText}>
-                        <h2>Invest in <span>Bitcoin</span> <br/>Bitcoin Trading</h2>
-                        <h4>Use modern progressive technologies of Bitcoin to earn money</h4>
+                        <h2>Start with <span>DCCD</span> <br/>Safe Cargo Delivery</h2>
+                        <h4>Use modern progressive technologies of Blockchain to safe your deliveries</h4>
                         <form className={style.heroForm}>
                             <input type="text" placeholder="Enter your email"/>
                                 <button className={style.siteBtn}>Get Started</button>

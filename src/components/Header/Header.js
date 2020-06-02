@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../../../img/logo.png"
+import logo from "../../img/logo.png"
 import style from "./Header.module.css";
 import {NavLink} from "react-router-dom";
 
@@ -13,11 +13,9 @@ export const Header = (props) => {
                     </a>
                 </div>
                     <ul className={style.menuList}>
-                        <NavLink to="/"><li><a href="#menu">Home</a></li></NavLink>
-                        <NavLink to="/find"><li><a href="#menu">Cargo ID</a></li></NavLink>
-                        <li><a href="#menu">News</a></li>
-                        <li><a href="#menu">About</a></li>
-                        <li><a href="#menu">Contact</a></li>
+                        <NavLink to="/"><li>Home</li></NavLink>
+                        <NavLink to="/find"><li>Cargo ID</li></NavLink>
+                        <NavLink to="/new"><li>New Transaction</li></NavLink>
                     </ul>
             </div>
         </header>
