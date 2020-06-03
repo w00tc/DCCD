@@ -8,7 +8,7 @@ import {useTransactionForm} from "./useNewTransactionHook";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 
 export const NewTransaction = (props) => {
-    const {inputs, handleInputChange, handleSubmit, status, wifError} = useTransactionForm({
+    const {inputs, handleInputChange, handleSubmit, status, error} = useTransactionForm({
         cargoId: '',
         privateKey: '',
         information: ''
@@ -59,8 +59,8 @@ export const NewTransaction = (props) => {
                 </form>
                 <div className={style.status}>
                     <h2>{status}</h2>
+                    <h2>{error}</h2>
                 </div>
-                {wifError}
             </div>
             <Footer/>
         </div>

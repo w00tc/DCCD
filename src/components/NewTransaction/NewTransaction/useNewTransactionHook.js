@@ -9,12 +9,13 @@ let sha256 = require('js-sha256');
 
 export const useTransactionForm = (initialValues) => {
     const [inputs, setInputs] = useState(initialValues);
+    const [error, setError] = useState('');
     const items = useSelector(state => state.items.items);
     const status = useSelector(state => state.items.status);
     function buf2hex(buffer) { // buffer is an ArrayBuffer
         return Array.prototype.map.call(new Uint8Array(buffer), x => ('00' + x.toString(16)).slice(-2)).join('');
     }
-
+    let wifError = '';
     const dispatch = useDispatch();
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -67,20 +68,18 @@ export const useTransactionForm = (initialValues) => {
             }
             dispatch(postItems(dictionary))
         } catch (e) {
-            handleWifError()
+            setError('Invalid WIF-format private key')
         }
     }
     const handleInputChange = (event) => {
         event.persist();
         setInputs(inputs => ({...inputs, [event.target.name]: event.target.value}));
     }
-    const handleWifError = () => {
-        alert('Wif Error')
-    }
     return {
         handleSubmit,
         handleInputChange,
         inputs,
+        error,
         items,
         status
     };
