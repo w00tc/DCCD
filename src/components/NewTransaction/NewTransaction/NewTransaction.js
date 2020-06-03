@@ -58,7 +58,7 @@ export const NewTransaction = (props) => {
                     </Button>
                 </form>
                 <div className={style.status}>
-                    <h2>{status}</h2>
+                    <h2>{status === "Transaction sent" ? <div className={style.green}>{status}</div> : status }</h2>
                     <h2>{error}</h2>
                 </div>
             </div>

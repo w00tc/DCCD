@@ -12,10 +12,10 @@ const FindResult = (props) => {
     let year = a.getFullYear();
     let month = months[a.getMonth()];
     let date = a.getDate();
-    let hour = a.getHours();
-    let min = a.getMinutes();
-    let sec = a.getSeconds();
-    let time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+    let hour = "0" + a.getHours();
+    let min = "0" + a.getMinutes();
+    let sec = "0" + a.getSeconds();
+    let time = date + ' ' + month + ' ' + year + ' ' + hour.substr(-2) + ':' + min.substr(-2) + ':' + sec.substr(-2) ;
     return (
         <div className={style.mainResult}>
             <h3>Your CargoId: <p>{props.cargo_id}</p></h3>

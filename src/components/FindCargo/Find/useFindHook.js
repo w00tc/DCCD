@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {requestItems} from "../../../redux/itemsReducer";
+import {requestItems, setStatus} from "../../../redux/itemsReducer";
 
 export const useFindForm = (initialValues) => {
     const [inputs, setInputs] = useState(initialValues);
@@ -9,6 +9,7 @@ export const useFindForm = (initialValues) => {
     const dispatch = useDispatch();
     const handleSubmit = (event) => {
         if (event) event.preventDefault();
+        dispatch(setStatus(''))
         dispatch(requestItems(inputs.cargoId))
         console.log(inputs.cargoId);
     }

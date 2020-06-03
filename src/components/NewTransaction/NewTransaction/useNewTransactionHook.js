@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {postItems} from "../../../redux/itemsReducer";
+import {postItems, setStatus} from "../../../redux/itemsReducer";
 let elliptic = require('elliptic');
 let ec = new elliptic.ec('secp256k1');
 let secp256k1 = require('secp256k1')
@@ -19,6 +19,8 @@ export const useTransactionForm = (initialValues) => {
     const dispatch = useDispatch();
     const handleSubmit = (event) => {
         event.preventDefault();
+        dispatch(setStatus(''))
+        setError('');
         console.log(inputs.cargoId, inputs.information, inputs.privateKey);
         let cargoId = inputs.cargoId;
         let information = inputs.information

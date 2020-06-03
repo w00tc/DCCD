@@ -100,6 +100,9 @@ export const requestItems = (cargoId) => async (dispatch) => {
 export const postItems = (dictionary) => async (dispatch) => {
     let response = await itemsAPI.postItems(dictionary);
     errorHandler(response.data.result_code, dispatch)
+    if (response.data.result_code === 0) {
+        dispatch(setStatus("Transaction sent"))
+    }
     console.log(response)
 }
 
