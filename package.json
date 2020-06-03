@@ -17,6 +17,7 @@
     "libp2p-crypto-secp256k1": "^0.4.3",
     "material-ui": "^0.20.2",
     "material-ui-search-bar": "^1.0.0-beta.14",
+    "noble-secp256k1": "^1.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
@@ -47,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "coinstring": "^2.3.0",
     "elliptic": "^6.5.2",
     "libp2p-crypto": "^0.17.6",
     "redux-form": "^8.3.5",

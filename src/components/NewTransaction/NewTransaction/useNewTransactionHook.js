@@ -1,11 +1,11 @@
 import {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {postItems} from "../../../redux/itemsReducer";
-
-let wif = require('wif');
 let elliptic = require('elliptic');
-let sha3 = require('js-sha3');
 let ec = new elliptic.ec('secp256k1');
+let secp256k1 = require('secp256k1')
+let wif = require('wif');
+let sha256 = require('js-sha256');
 
 export const useTransactionForm = (initialValues) => {
     const [inputs, setInputs] = useState(initialValues);
@@ -22,44 +22,42 @@ export const useTransactionForm = (initialValues) => {
         console.log(inputs.cargoId, inputs.information, inputs.privateKey);
         let cargoId = inputs.cargoId;
         let information = inputs.information;
+        console.log(inputs.privateKey);
         let privateKey = wif.decode(inputs.privateKey);
-        console.log(privateKey.privateKey + "decoded wif")
         privateKey = buf2hex(privateKey.privateKey);
-        console.log(privateKey);
         let keyPair = ec.keyFromPrivate(privateKey);
         let privKey = keyPair.getPrivate("hex");
         let pubKey = keyPair.getPublic();
+        console.log(privateKey);
         console.log(`Private key: ${privKey}`);
         console.log("Public key :", pubKey.encode("hex"));
         console.log("Public key (compressed):",
-            pubKey.encodeCompressed("hex"));
-        let string = ("134589037" + '1588410854.301351' + "25" + "cargo_info");
-        let msgHash = sha3.keccak256(string);
-        let signature = ec.sign(msgHash, privKey, "hex", {canonical: true});
-        console.log(`Msg: ${string}`);
-        console.log(`Msg hash: ${msgHash}`);
-        console.log("Signature:", signature);
-        console.log();
-        signature = signature.r.toString(16) + signature.r.toString(16);
-        console.log(signature);
-        // let hexToDecimal = (x) => ec.keyFromPrivate(x, "hex").getPrivate().toString(10);
-        // let pubKeyRecovered = ec.recoverPubKey(
-        //     hexToDecimal(msgHash), signature, signature.recoveryParam, "hex");
-        // console.log("Recovered pubKey:", pubKeyRecovered.encodeCompressed("hex"));
-        //
-        // let validSig = ec.verify(msgHash, signature, pubKeyRecovered);
-        // console.log("Signature valid?", validSig);
-        //let timestamp = parseInt((new Date().getTime() / 1000).toFixed(0))
-        //timestamp = timestamp.toString()
-        //let temperature = '25';
+             pubKey.encodeCompressed("hex"));
+        let timestamp = (Math.round((new Date()).getTime() / 1000));
+        timestamp = timestamp.toString()
+        let temperature = '0'
+        let string = (cargoId + timestamp + temperature + information);
+        console.log(string);
+        let msgHash = sha256(string);
+        let hash = Buffer.from(msgHash, 'hex')
+        hash = buf2hex(hash);
+        hash = sha256(hash);
+        hash = Buffer.from(hash, 'hex')
+        console.log(hash);
+        let priv = Buffer.from(privateKey, 'hex')
+        console.log(buf2hex(priv));
+        const sigObj = secp256k1.ecdsaSign(hash, priv);
+        let final = (buf2hex(sigObj.signature));
+        console.log(final);
+
         let dictionary = {
             dictionary: {
-                cargo_id: '134589037',
-                timestamp: '1588410854.301351',
-                temperature: '25',
-                information: 'cargo_info',
+                cargo_id: cargoId,
+                timestamp: timestamp,
+                temperature: temperature,
+                information: information,
                 public_key: pubKey.encode("hex"),
-                signed_hash: signature
+                signed_hash: final
             }
         }
         dispatch(postItems(dictionary))
