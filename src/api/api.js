@@ -1,7 +1,7 @@
 import * as axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'http://tmaslyan.pythonanywhere.com',
+    baseURL: 'https://dccdnode2.oa.r.appspot.com',
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
@@ -16,5 +16,8 @@ export const itemsAPI = {
     postItems(dictionary) {
         console.log(dictionary)
         return instance.post(`/transactions/new`, dictionary)
+    },
+    getPendings() {
+        return instance.get('/transactions/pendings');
     }
 }

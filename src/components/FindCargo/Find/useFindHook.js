@@ -5,6 +5,7 @@ import {requestItems} from "../../../redux/itemsReducer";
 export const useFindForm = (initialValues) => {
     const [inputs, setInputs] = useState(initialValues);
     const items = useSelector(state => state.items.items);
+    const status = useSelector(state => state.items.status)
     const dispatch = useDispatch();
     const handleSubmit = (event) => {
         if (event) event.preventDefault();
@@ -19,7 +20,8 @@ export const useFindForm = (initialValues) => {
         handleSubmit,
         handleInputChange,
         inputs,
-        items
+        items,
+        status
     };
 
 }

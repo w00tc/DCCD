@@ -7,19 +7,34 @@ import Button from "@material-ui/core/Button";
 import {useFindForm} from "./useFindHook";
 
 const FindResult = (props) => {
+    let a = new Date(props.timestamp * 1000);
+    let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    let year = a.getFullYear();
+    let month = months[a.getMonth()];
+    let date = a.getDate();
+    let hour = a.getHours();
+    let min = a.getMinutes();
+    let sec = a.getSeconds();
+    let time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
     return (
         <div className={style.mainResult}>
-            <h1>Your CargoId: <p>{props.cargo_id}</p></h1>
-            <h3>Timestamp: <p>{props.timestamp}</p></h3>
+            <h3>Your CargoId: <p>{props.cargo_id}</p></h3>
+            <h3>Information: <p>{props.information}</p></h3>
+            <h3>Temperature: <p>{props.temperature}</p></h3>
+            <h3>Timestamp: <p>{time}</p></h3>
             <h4>Public Key: <p>{props.public_key}</p></h4>
             <h4>Signed Hash: <p>{props.signed_hash}</p></h4>
         </div>
     )
 }
 export const Find = (props) => {
-    const {inputs, handleInputChange, handleSubmit, items} = useFindForm({cargoId: ''});
-    let itemsElements = items.map(items => <FindResult cargo_id={items.cargo_id} timestamp={items.timestamp}
-                                                       public_key={items.public_key} signed_hash={items.signed_hash}/>
+    const {inputs, handleInputChange, handleSubmit, items, status} = useFindForm({cargoId: ''});
+    let itemsElements = items.map(items => <FindResult cargo_id={items.cargo_id}
+                                                       information={items.information}
+                                                       public_key={items.public_key}
+                                                       signed_hash={items.signed_hash}
+                                                       temperature={items.temperature}
+                                                       timestamp={items.timestamp}/>
     )
     return (
         <div>
@@ -47,6 +62,9 @@ export const Find = (props) => {
                         Find
                     </Button>
                 </form>
+                <div className={style.status}>
+                    <h2>{status}</h2>
+                </div>
                 {itemsElements}
             </div>
             <Footer/>

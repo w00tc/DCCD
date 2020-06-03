@@ -101,3 +101,7 @@
 .textArea:active {
     border-color: #20509e;
 }
+.status h2 {
+    color: red;
+    font-weight: 500;
+}

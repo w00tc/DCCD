@@ -43,7 +43,7 @@
     cursor: pointer;
     color: #fff;
     background: linear-gradient(to right, #3e2bce 0%, #2dd3aa 100%, #2dd3aa 100%, #2dd3aa 100%);
-    margin-bottom: 25px;
+    margin: 40px;
 }
 #cargoId {
     color: black;
@@ -64,17 +64,6 @@
     justify-items: start;
     color: #20509e;
     grid-template-columns: repeat(auto-fill, 100%);
-}
-.aboutData h2 p {
-    font-size: 16px;
-    font-weight: 500;
-}
-.aboutData h2 {
-    margin: 0;
-}
-.status h2 {
-    color: red;
-    font-weight: 500;
 }
 .mainResult h3{
     margin: 0;

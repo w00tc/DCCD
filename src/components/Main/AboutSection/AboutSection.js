@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./AboutSection.module.css";
-import aboutImg from "../../../img/about-img.png"
+import aboutImg from "../../../img/about-img.bmp"
 
 export const AboutSection = (props) => {
     return (

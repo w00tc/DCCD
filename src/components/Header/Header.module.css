@@ -3,10 +3,10 @@
     src: url("../../fonts/Futura.woff");
 }
 
-
 .headerSection {
     padding: 15px 0;
     z-index: 99;
+    color: #16d0c5;
 }
 .containerFluid {
     display: grid;
@@ -34,12 +34,18 @@
 }
 .menuList li {
     display: inline;
+    color: #002d76;
+    font-weight: 500;
 }
 .menuList li a {
     display: inline-block;
     font-family: "Futura", sans-serif;
     font-size: 16px;
-    color: #fff;
+    color: #002d76;
     text-decoration: none;
     background-color: transparent;
+}
+.menuList li a.active {
+    text-decoration: white;
+    color: #002d76;
 }

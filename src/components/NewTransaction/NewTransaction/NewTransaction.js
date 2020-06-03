@@ -8,7 +8,11 @@ import {useTransactionForm} from "./useNewTransactionHook";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 
 export const NewTransaction = (props) => {
-    const {inputs, handleInputChange, handleSubmit} = useTransactionForm({cargoId: '', privateKey:'', information:'' });
+    const {inputs, handleInputChange, handleSubmit, status, wifError} = useTransactionForm({
+        cargoId: '',
+        privateKey: '',
+        information: ''
+    });
     return (
         <div>
             <Header/>
@@ -16,34 +20,35 @@ export const NewTransaction = (props) => {
                 <form onSubmit={handleSubmit}>
                     <h1>Make your <span>New Transaction</span></h1><br/>
                     <div className={style.field}>
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        className={style.field}
-                        value={inputs.cargoId}
-                        onChange={handleInputChange}
-                        id="cargoId"
-                        label="CargoId"
-                        name="cargoId"
-                        autoFocus
-                    /><br/>
-                    <TextareaAutosize onChange={handleInputChange} value={inputs.information} className={style.textArea} rowsMin={16} id="information"
-                                      label="Information"
-                                      name="information"/>
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        className={style.field}
-                        onChange={handleInputChange}
-                        value={inputs.privateKey}
-                        id="privateKey"
-                        label="WIF-format private key"
-                        name="privateKey"
-                        autoFocus
-                    /><br/>
-                </div>
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            className={style.field}
+                            value={inputs.cargoId}
+                            onChange={handleInputChange}
+                            id="cargoId"
+                            label="CargoId"
+                            name="cargoId"
+                            autoFocus
+                        /><br/>
+                        <TextareaAutosize onChange={handleInputChange} value={inputs.information}
+                                          className={style.textArea} rowsMin={16} id="information"
+                                          label="Information"
+                                          name="information"/>
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            className={style.field}
+                            onChange={handleInputChange}
+                            value={inputs.privateKey}
+                            id="privateKey"
+                            label="WIF-format private key"
+                            name="privateKey"
+                            autoFocus
+                        /><br/>
+                    </div>
                     <Button
                         type="submit"
                         variant="contained"
@@ -52,6 +57,10 @@ export const NewTransaction = (props) => {
                         SEND
                     </Button>
                 </form>
+                <div className={style.status}>
+                    <h2>{status}</h2>
+                </div>
+                {wifError}
             </div>
             <Footer/>
         </div>
