@@ -1,0 +1,68 @@
+.heroSection {
+    height: 700px;
+    background-image: url("../../../img/hero-bg.png");
+    background-size: cover;
+    background-color: #f3f7f9;
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 10%;
+    align-items: center;
+}
+.heroSection .laptopImage {
+    max-width: 685px;
+    width: 100%;
+    padding-top: 120px;
+}
+
+.heroText {
+    font-family: "Futura", sans-serif;
+    font-weight: 500;
+    padding-top: 60px;
+}
+.heroText h2 {
+    font-size: 70px;
+    margin-bottom: 35px;
+    color: #20509e;
+    font-weight: 500;
+}
+.heroText h2 span {
+    color: #16d0c5;
+    font-weight: 500;
+}
+.heroText h4 {
+    color: #75849a;
+    font-size: 22px;
+    font-weight: 500;
+}
+.heroForm input {
+    width: 315px;
+    border: 1px solid #ebebeb;
+    background: #fff;
+    height: 48px;
+    padding: 0 25px;
+    border-radius: 50px;
+    font-family: "Futura", sans-serif;
+    font-size: 16px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+}
+.siteBtn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    border-radius: 50px;
+    font-family: "Futura", sans-serif;
+    min-width: 170px;
+    text-align: center;
+    border: 1px solid #7ad4cc;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(to right, #3e2bce 0%, #2dd3aa 100%, #2dd3aa 100%, #2dd3aa 100%);
+}

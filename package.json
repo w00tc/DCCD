@@ -1,0 +1,81 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.17",
+    "@material-ui/core": "^4.12.3",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.25.0",
+    "eccrypto": "^1.1.6",
+    "history": "^5.2.0",
+    "js-sha256": "^0.9.0",
+    "js-sha3": "^0.8.0",
+    "libp2p-crypto-secp256k1": "^0.4.3",
+    "material-ui": "^0.20.2",
+    "material-ui-search-bar": "^1.0.0",
+    "noble-secp256k1": "^1.2.14",
+    "node-sass": "^7.0.1",
+    "patch-package": "^6.4.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^5.0.0",
+    "redux": "^4.1.2",
+    "redux-form": "^8.3.8",
+    "redux-thunk": "^2.4.1",
+    "stream": "0.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "closure-webpack-plugin": "^2.5.0",
+    "coinstring": "^2.3.0",
+    "css-loader": "^6.6.0",
+    "elliptic": "^6.5.4",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "file-loader": "^6.2.0",
+    "google-closure-compiler": "^20220104.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.0",
+    "json-loader": "^0.5.7",
+    "libp2p-crypto": "^0.21.2",
+    "mini-css-extract-plugin": "^2.5.3",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "po2json": "^0.4.5",
+    "react-test-renderer": "^17.0.2",
+    "redux-mock-store": "^1.5.4",
+    "secp256k1": "^4.0.3",
+    "url-loader": "^4.1.1",
+    "wif": "^2.0.6",
+    "yargs": "^17.3.1",
+    "yarn-upgrade-all": "^0.6.1"
+  }
+}

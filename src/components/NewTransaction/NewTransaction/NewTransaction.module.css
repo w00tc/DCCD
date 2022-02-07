@@ -1,0 +1,115 @@
+.find {
+    background-color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.find form {
+    text-align: center;
+}
+.field {
+    width: 400px;
+}
+.find .field {
+    margin: 0;
+}
+.fieldInfo {
+    width: 500px;
+}
+.find div {
+    margin-bottom: 15px;
+}
+.find form h1 {
+    margin: 0;
+    color: #20509e;
+}
+.find h1 span {
+    color: #16d0c5;
+}
+.mainResult h1 {
+    color: #20509e;
+    display: inline-block;
+}
+.mainResult p {
+    display: inline-block;
+    color: black;
+}
+.find button {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    border-radius: 50px;
+    font-family: "Futura", sans-serif;
+    min-width: 125px;
+    text-align: center;
+    border: 1px solid #7ad4cc;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(to right, #3e2bce 0%, #2dd3aa 100%, #2dd3aa 100%, #2dd3aa 100%);
+    margin-bottom: 25px;
+}
+#cargoId {
+    color: black;
+    font-weight: normal;
+}
+.mainResult {
+    border: 1px solid #7ad4cc;
+    position: relative;
+    padding: 15px 30px;
+    margin-top: 1%;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    font-family: "Futura", sans-serif;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    color: #20509e;
+    grid-template-columns: repeat(auto-fill, 100%);
+}
+.mainResult h2{
+    margin: 20px 0 0 0;
+}
+.aboutData h2 p {
+    font-size: 16px;
+    font-weight: 500;
+}
+.aboutData h2 {
+    margin: 0;
+}
+.textArea {
+    position: relative;
+    padding: 15px 30px 15px 14px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-color: rgb(195, 195, 195);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    width: 353px;
+    font-family: "Futura", sans-serif;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    grid-template-columns: repeat(auto-fill, 100%);
+}
+.textArea:active {
+    border-color: #20509e;
+}
+.status h2 {
+    color: red;
+    font-weight: 500;
+}
+.green {
+    color: green;
+    font-weight: 500;
+}
+.green h2 {
+    color: green;
+    font-weight: 500;
+}

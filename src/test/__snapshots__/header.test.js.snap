@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+exports[`With React Testing Library Shows "Rendered Component" 1`] = `
+<header
+  className="headerSection"
+>
+  <div
+    className="containerFluid"
+  >
+    <div
+      className="siteLogo"
+    >
+      <img
+        alt=""
+        src="logo.png"
+      />
+    </div>
+    <ul
+      className="menuList"
+    >
+      <a
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <li>
+          Home
+        </li>
+      </a>
+      <a
+        aria-current={null}
+        href="/find"
+        onClick={[Function]}
+      >
+        <li>
+          Cargo ID
+        </li>
+      </a>
+      <a
+        aria-current={null}
+        href="/new"
+        onClick={[Function]}
+      >
+        <li>
+          New Transaction
+        </li>
+      </a>
+      <a
+        aria-current={null}
+        href="/pendings"
+        onClick={[Function]}
+      >
+        <li>
+          Pendings
+        </li>
+      </a>
+    </ul>
+  </div>
+</header>
+`;

@@ -1,0 +1,15 @@
+export const OK = 'OK';
+export const UNAUTHORIZED_PRIVATE_KEY = 'UNAUTHORIZED_PRIVATE_KEY';
+export const EMPTY_CHAIN = 'EMPTY_CHAIN';
+export const WRONG_CHAIN_HEIGHT_NUMBER = 'WRONG_CHAIN_HEIGHT_NUMBER';
+export const INVALID_ARGUMENT = 'INVALID_ARGUMENT';
+export const INVALID_TRANSACTION = 'INVALID_TRANSACTION';
+export const INVALID_SIGNATURE = 'INVALID_SIGNATURE';
+export const CARGO_ID_NOT_FOUND = 'Your cargo id not found';
+export const BLOCK_ALREADY_ADDED = 8;
+export const WRONG_PREVIOUS_BLOCK_HASH = 9;
+export const INVALID_BLOCK_TRANSACTIONS = 10;
+export const INVALID_BLOCK = 11;
+export const INVALID_BLOCK_HASH = 12;
+export const INVALID_MERKLE_ROOT = 13;
+export const CARGO_INFORMATION_ALREADY_EXISTS = 'First information already exists, leave information field empty';

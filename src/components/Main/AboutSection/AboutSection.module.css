@@ -1,0 +1,52 @@
+.AboutSection {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 10%;
+    padding: 100px 0 100px 0;
+}
+
+.aboutImage img {
+    width: 100%;
+    max-width: 550px;
+}
+.aboutImage {
+    display: grid;
+    align-items: center;
+}
+.aboutText h2 {
+    font-size: 48px;
+    color: #20509e;
+    font-weight: 500;
+    margin: 0 0 25px 0;
+}
+.aboutText h5 {
+    font-family: "Lato", sans-serif;
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #20509e;
+}
+.aboutText p {
+    font-size: 18px;
+    color: #75849a;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+}
+.siteBtn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    border-radius: 50px;
+    font-family: "Futura", sans-serif;
+    min-width: 108px;
+    text-align: center;
+    color: #20509e;
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgb(62, 43, 206), rgb(45, 211, 170)), linear-gradient(101deg, #3e2bce, #2dd3aa);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+}
